@@ -21,7 +21,13 @@
   body.dark-mode h6 {
     color: #fff;
   }
+  body.dark-mode .dark {
+    display: none;
+  }
   body.dark-mode .light {
+    display: block !important;
+  }
+  .light {
     display: none;
   }
 }
