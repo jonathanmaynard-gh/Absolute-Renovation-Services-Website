@@ -24,12 +24,6 @@
   body.dark-mode .light {
     display: none;
   }
-  body.dark-mode .dark {
-    display: block !important;
-  }
-  .dark {
-    display: none;
-  }
 }
 /*-- -------------------------- -->
 <---      Dark Mode Toggle      -->
