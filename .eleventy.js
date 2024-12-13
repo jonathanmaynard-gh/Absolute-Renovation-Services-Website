@@ -54,7 +54,7 @@ module.exports = function (eleventyConfig) {
 
   // allows css, assets, robots.txt and CMS config files to be passed into /public
   eleventyConfig.addPassthroughCopy('./src/css/**/*.css');
-  eleventyConfig.addPassthroughCopy('./src/assets');
+  eleventyConfig.addPassthroughCopy('./src/assets'); // General passthrough for assets (includes .mp4 files)
   eleventyConfig.addPassthroughCopy('./src/admin');
   eleventyConfig.addPassthroughCopy('./src/_redirects');
   eleventyConfig.addPassthroughCopy({ './src/robots.txt': '/robots.txt' });
@@ -65,11 +65,10 @@ module.exports = function (eleventyConfig) {
     files: './public/css/**/*.css',
   });
 
-  // allows the {% image %} shortcode to be used for optimised iamges (in webp if possible)
+  // allows the {% image %} shortcode to be used for optimised images
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
 
-  // normally, 11ty will render dates on blog posts in full JSDate format (Fri Dec 02 18:00:00 GMT-0600). That's ugly
-  // this filter allows dates to be converted into a normal, locale format. view the docs to learn more (https://moment.github.io/luxon/api-docs/index.html#datetime)
+  // date filter for blog posts
   eleventyConfig.addFilter('postDate', (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
@@ -81,7 +80,7 @@ module.exports = function (eleventyConfig) {
       layouts: "_layouts",
       output: 'public',
     },
-    // allows .html files to contain nunjucks templating language
     htmlTemplateEngine: 'njk',
   };
 };
+
