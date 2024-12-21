@@ -545,7 +545,7 @@
     text-decoration: none;
     font-weight: bold;
     /* 14px - 18px */
-    font-size: clamp(0.875rem, 1.175vw, .98rem);
+    font-size: clamp(0.5rem, 1.1vw, 1.5rem);
     text-transform: uppercase;
     position: relative;
     z-index: 1;
@@ -734,12 +734,12 @@
 @media only screen and (min-width: 0em) {
   #footer {
     background: #1C1C1C;
-    padding: 5.25rem 0 1.25rem;
+    padding: 4.25rem 0 1.25rem;
     font-size: min(4vw, 1.2em);
   }
   #footer .left-section {
     margin: auto;
-    margin-bottom: 3.125rem;
+    margin-bottom: 9.5rem;
     text-align: center;
   }
   #footer .left-section .logo {
@@ -747,7 +747,7 @@
     margin: auto;
     width: auto;
     height: 3.125em;
-    margin-bottom: 1.875em;
+    margin-bottom: .875em;
     text-align: center;
   }
   #footer .left-section .logo img {
@@ -775,16 +775,16 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 96%;
-    max-width: 19.1875rem;
+    max-width: 7.1875rem;
     margin: auto;
   }
   #footer .right-section .lists ul {
     padding: 0;
-    margin-bottom: 0;
+    margin-bottom: 2.4rem;
     margin-top: 0;
   }
   #footer .right-section .lists ul:nth-of-type(3) {
-    margin-top: 3.125rem;
+    margin-top: 0rem;
   }
   #footer .right-section .lists ul:nth-of-type(3) li {
     display: flex;
@@ -846,7 +846,7 @@
     width: 96%;
     margin: auto;
     text-align: center;
-    margin-top: 6.25rem;
+    margin-top: 0.25rem;
     line-height: 2.25rem;
     font-size: 1rem;
   }
